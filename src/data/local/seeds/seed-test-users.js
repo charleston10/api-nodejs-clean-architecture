@@ -1,6 +1,6 @@
 'use strict';
 
-const dataFaker = require('src/infra/support/dataFaker');
+const dataFaker = require('src/core/support/dataFaker');
 
 module.exports = {
   up: function (queryInterface) {
@@ -14,10 +14,10 @@ module.exports = {
       });
     }
 
-    return queryInterface.bulkInsert('users', testUsers, {});
+    return queryInterface.bulkInsert('client', testUsers, {});
   },
 
   down: function (queryInterface) {
-    return queryInterface.bulkDelete('users', null, {});
+    return queryInterface.bulkDelete('client', null, {});
   }
 };
