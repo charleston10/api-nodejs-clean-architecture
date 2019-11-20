@@ -22,6 +22,6 @@ module.exports = {
     });
   },
   down: function(queryInterface) {
-    return queryInterface.dropTable('users');
+    return queryInterface.dropTable('client');
   }
 };
