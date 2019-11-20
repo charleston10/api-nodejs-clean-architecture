@@ -1,0 +1,31 @@
+# Logs
+*.log
+
+# Node
+node_modules/
+
+# Project specific
+config/database.js
+
+# Unit test / coverage reports
+coverage/
+.nyc_output
+
+# OS auto-generated files
+.DS_Store
+._*
+
+
+# Vim
+*~
+*.swp
+*.swo
+
+# IDE files
+.idea/
+
+# Script SQL
+database.sql
+
+# Packages Lock Json
+package-lock.json
