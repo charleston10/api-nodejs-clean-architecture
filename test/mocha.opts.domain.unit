@@ -1,0 +1,3 @@
+test/setup.js
+test/unit/domain/**/*.spec.js
+--recursive
