@@ -6,7 +6,7 @@ if (config) {
   const sequelize = new
     Sequelize(
       config.database,
-      config.user,
+      config.username,
       config.password,
       {
         host: config.host,

@@ -3,7 +3,7 @@ module.exports = {
       host: 'localhost',
       dialect: 'postgres',
       database: 'charleston-dev',
-      user: 'postgres',
+      username: 'postgres',
       password: '123456789',
       pool: {
         max: 1,
@@ -15,7 +15,7 @@ module.exports = {
       host: 'localhost',
       dialect: 'postgres',
       database: 'charleston-test',
-      user: 'postgres',
+      username: 'postgres',
       password: '123456789',
       pool: {
         max: 1,
@@ -27,7 +27,7 @@ module.exports = {
       host: 'localhost',
       dialect: 'postgres',
       database: 'charleston-api-clean',
-      user: 'postgres',
+      username: 'postgres',
       password: '123456789',
       pool: {
         max: 9,
