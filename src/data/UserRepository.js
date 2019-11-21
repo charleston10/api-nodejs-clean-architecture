@@ -75,17 +75,22 @@ class UserRepository {
 
   async _getById(id) {
     try {
-      return await this.userEntity.findById(id, { rejectOnEmpty: true });
-    } catch (error) {
-      if (error.name === 'SequelizeEmptyResultError') {
-        const notFoundError = new Error('NotFoundError');
-        notFoundError.details = `User with id ${id} can't be found.`;
+      let user = await this.userEntity.findOne({ where: { id: id } }, { rejectOnEmpty: true });
 
-        throw notFoundError;
+      if (user === null) {
+        return this._errorNotFound(id);
       }
 
-      throw error;
+      return user;
+    } catch (error) {
+      return this._errorNotFound(id);
     }
+  }
+
+  _errorNotFound(id) {
+    const notFoundError = new Error('NotFoundError');
+    notFoundError.details = `User with id ${id} can't be found.`;
+    throw notFoundError;
   }
 }
 

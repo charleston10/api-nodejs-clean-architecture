@@ -133,7 +133,7 @@ describe('Data :: User :: UserRepository', () => {
           return expect(async () => {
             return await repository.update(user.id, { name: 'New User' });
           }).to.alter(async () => {
-            const dbUser = await userEntity.findById(user.id);
+            const dbUser = await userEntity.findOne({id: user.id});
             return dbUser.name;
           }, { from: 'User', to: 'New User' });
         });
@@ -152,7 +152,7 @@ describe('Data :: User :: UserRepository', () => {
               expect(error.message).to.equal('ValidationError');
             }
           }).to.not.alter(async () => {
-            const dbUser = await userEntity.findById(user.id);
+            const dbUser = await userEntity.findOne({id: user.id});
             return dbUser.name;
           });
         });
