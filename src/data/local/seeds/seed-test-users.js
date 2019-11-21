@@ -1,6 +1,6 @@
 'use strict';
 
-const dataFaker = require('src/core/support/dataFaker');
+const dataFaker = require('src/core/infra/support/dataFaker');
 
 module.exports = {
   up: function (queryInterface) {
@@ -9,8 +9,8 @@ module.exports = {
     for(let i = 0; i < 20; i++) {
       testUsers.push({
         name: dataFaker.name(),
-        createdAt: new Date(),
-        updatedAt: new Date()
+        created_at: new Date(),
+        updated_at: new Date()
       });
     }
 
