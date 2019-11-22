@@ -13,11 +13,11 @@ class Application {
     if (this.database) {
       await this.database.authenticate()
         .then(() => {
-          console.log('database connected')
+          console.info('database connected');
         })
         .catch((err) => {
-          console.log('database error in connection', err)
-        })
+          console.info('database error in connection', err);
+        });
     }
 
     await this.server.start();

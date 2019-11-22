@@ -4,16 +4,16 @@ const { db: config } = require('../../../config');
 
 if (config) {
   const sequelize = new
-    Sequelize(
-      config.database,
-      config.user,
-      config.password,
-      {
-        host: config.host,
-        dialect: config.dialect,
-        pool: config.pool
-      }
-    );
+  Sequelize(
+    config.database,
+    config.user,
+    config.password,
+    {
+      host: config.host,
+      dialect: config.dialect,
+      pool: config.pool
+    }
+  );
 
   module.exports = ModelsLoader.load({
     sequelize,

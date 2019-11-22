@@ -11,20 +11,20 @@ const logger = require('../../core/logging/logger');
 const config = require('../../../config');
 
 module.exports = {
-    configContainer: {
-        config: asValue(config)
-    },
-    httpContainer: {
-        server: asClass(Server).singleton(),
-        router: asFunction(router).singleton(),
-        logger: asFunction(logger).singleton(),
-    },
-    middlewareContainer: function (container) {
-        return {
-            loggerMiddleware: asFunction(loggerMiddleware).singleton(),
-            containerMiddleware: asValue(scopePerRequest(container)),
-            errorHandler: asValue(config.production ? errorHandler : devErrorHandler),
-            swaggerMiddleware: asValue([swaggerMiddleware])
-        }
-    }
-}
+  configContainer: {
+    config: asValue(config)
+  },
+  httpContainer: {
+    server: asClass(Server).singleton(),
+    router: asFunction(router).singleton(),
+    logger: asFunction(logger).singleton(),
+  },
+  middlewareContainer: function (container) {
+    return {
+      loggerMiddleware: asFunction(loggerMiddleware).singleton(),
+      containerMiddleware: asValue(scopePerRequest(container)),
+      errorHandler: asValue(config.production ? errorHandler : devErrorHandler),
+      swaggerMiddleware: asValue([swaggerMiddleware])
+    };
+  }
+};

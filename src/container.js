@@ -19,6 +19,6 @@ container
   .register(presentationContainer)
   .register(domainContainer)
   .register(localContainer)
-  .register(repositoryContainer)
+  .register(repositoryContainer);
 
 module.exports = container;
