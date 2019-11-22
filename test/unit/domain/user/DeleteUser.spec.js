@@ -46,7 +46,6 @@ describe('Domain :: User :: DeleteUser', () => {
     });
   });
 
-
   context('when there is an internal error', () => {
     before(() => {
       const MockUsersRepository = {

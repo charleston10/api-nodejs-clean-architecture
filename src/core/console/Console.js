@@ -13,7 +13,6 @@ module.exports = {
   }
 };
 
-
 function promisableEval(cmd, context, filename, callback) {
   const result = vm.runInContext(cmd, context);
 

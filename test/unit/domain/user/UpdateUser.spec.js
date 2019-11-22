@@ -75,7 +75,6 @@ describe('Domain :: User :: UpdateUser', () => {
     });
   });
 
-
   context('when there is an internal error', () => {
     before(() => {
       const MockUserRepository = {

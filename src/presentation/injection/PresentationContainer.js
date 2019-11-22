@@ -1,4 +1,3 @@
-
 const { asValue } = require('awilix');
 const UserSerializer = require('../user/UserSerializer');
 
