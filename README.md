@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/charleston10/api-nodejs-clean-architecture/badge.svg?branch=master)](https://coveralls.io/github/charleston10/api-nodejs-clean-architecture?branch=master)
+
 # Node API Clean Architecture
 
 APIs focused on separation of concerns and scalability with Clean Architecture
