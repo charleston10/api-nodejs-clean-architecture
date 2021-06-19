@@ -1,4 +1,13 @@
-# Node API Clean Architecture
+# Node API Clean Architecture - DEPRECATED - Use https://nestjs.com/
+
+-> You can use NestJs, which covers the studies done in this repository as module integration. Please use https://nestjs.com/
+
+-----
+-----
+-----
+-----
+-----
+
 
 APIs focused on separation of concerns and scalability with Clean Architecture
 
